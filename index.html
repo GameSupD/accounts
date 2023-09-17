@@ -90,7 +90,7 @@ button {
 body {font-family: Arial, Helvetica, sans-serif;}
 </style>
 </head>
-<body onload="showUsername()">
+<body onload="hello()">
 <div class="center">
     <h1>
     <a href="https://gamesupd.github.io" target="_self">
@@ -111,59 +111,27 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <p style="padding: 0px; border: 2px solid white;"></p>
 
-  <h1 style="color:white;font-size:30px;">Accounts are coming soon!</h1>
-
-  <p style="padding: 0px; border: 0px solid white; width: 40%; font-size: 20px; color: white; margin: auto;">
-    Accounts are a feature that is still being worked on.
-  </p>
-
+    <h1 style="color:white;font-size:30px;">GameSup Account</h1>
+    <h1 style="color:white;font-size:30px;" id="text">Not logged in</h1>
+    <img src="" alt="pfp" width="60" height="60" id="pfp">
+    <br>
+    <br>
     <img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="" width="0" height="50">
-
-  <p style="padding: 0px; border: 0px solid white; width: 40%; font-size: 20px; color: white; margin: auto;">
-    GameSup accounts will only be stored locally. That means you can only access your account from the device you used to create it.
-  </p>
-  <br>
-    <p style="padding: 0px; border: 0px solid white; width: 40%; font-size: 20px; color: white; margin: auto;">
-    For now, you cannot use accounts, but you can create one already for when they actually get released!
-  </p>
-
-
-<br><br><br><br><br>
-
-    <h1 style="color:white;font-size:20px;">Username </h1>
-    <input type="text" id="username" value="">
-
-<br>
-    <br>
-    <br>
-<button onclick="register()">Register</button>
-    <h1 style="color:white;font-size:15px;" id="message"></h1>
-    <br>
-
-
-<script>
-  function register() {
-  var x = document.getElementById("username").value;
-  if (x.length < 21) {
-  if (x.includes(",")) {
-  document.getElementById("message").innerHTML = "Your username can't have any comma.";
-  }
-  else {
-  if (x == "") {
-  document.getElementById("message").innerHTML = "Your username can't be empty.";
-  }
-  else {
-  localStorage.setItem("username", x);
-  localStorage.setItem("loggedin", "true");
-  document.getElementById("message").innerHTML = "Your account has been created!";
-    }
-  }
-}
-else {
-document.getElementById("message").innerHTML = "Your username can't have more than 20 characters.";
-}
-}
-</script>
+<img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="" width="0" height="50">
+    <h3><a href="https://gamesupd.github.io/accounts/profile.html" target="_self">Profile</a></h3>
+    <p>
+    <h3><a href="https://gamesupd.github.io/accounts/login.html" target="_self">Login</a></h3>
+    <p>
+    <h3><a href="https://gamesupd.github.io/accounts/register.html" target="_self">Register</a></h3>
+    <p>
+    <h3><a href="https://gamesupd.github.io/accounts/settings.html" target="_self">Account Settings</a></h3>
+    <p>
+    <h3><a href="https://gamesupd.github.io/accounts/transfer.html" target="_self">Transfer Account Data</a></h3>
+    <img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="" width="0" height="50">
+    <h2 style="color:white;font-size:25px;">Game Data</h2>
+    <h3><a href="https://gamesupd.github.io/accounts/lostworld" target="_self">Lostworld</a></h3>
+    <h3><a href="https://gamesupd.github.io/accounts/bluepig" target="_self">Blue Pig</a></h3>
+<script src="login.js"> </script>
 
 </div>
 </body>

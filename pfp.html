@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Picture - GameSup</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/GameSup-logo.ico">
+    <style>
+    html {
+height: 100%;
+}
+body {
+background-image: linear-gradient(#424242, #424242);
+}
+</style>
+        <style>
+.center {
+  text-align: center;
+}
+</style>
+        <style>
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 20%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  margin: auto;
+  text-align: center;
+  width: 20%;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #424242;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #696969;
+  text-decoration: none;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+</style>
+</head>
+<body onload="pfp()">
+<div class="center">
+    <h1>
+    <a href="https://gamesupd.github.io" target="_self">
+        <img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="logo" width="160" height="40"></a>
+        <img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="" width="50" height="0">
+        <a href="https://gamesupd.github.io/about.html" target="_self"> About</a>
+        <img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="" width="50" height="0">
+        <a href="https://gamesupd.github.io/help.html" target="_self"> Help</a>
+        <img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/gamesup-logo.png" alt="" width="60" height="0">
+        <a href="https://gamesupd.github.io/accounts" target="_self"> Account</a>
+        <div class="searchbox">
+
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="search">
+
+
+</div>
+    </h1>
+
+    <p style="padding: 0px; border: 2px solid white;"></p>
+
+    <h1 style="color:white;font-size:30px;">Profile Picture</h1>
+
+  <h1 style="color:white;font-size:20px;">Current</h1>
+  <img src="" alt="pfp" width="60" height="60" id="pfp">
+
+    <br>
+    <br>
+  <br>
+  <h1 style="color:white;font-size:20px;">Default profile pictures</h1>
+    <button onclick="pfpchange(0)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp0.png" alt="" width="50" height="50"></button>
+<button onclick="pfpchange(1)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp1.png" alt="" width="50" height="50"></button>
+    <button onclick="pfpchange(2)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp2.png" alt="" width="50" height="50"></button>
+    <button onclick="pfpchange(3)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp3.png" alt="" width="50" height="50"></button>
+    <button onclick="pfpchange(4)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp4.png" alt="" width="50" height="50"></button>
+        <button onclick="pfpchange(5)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp5.png" alt="" width="50" height="50"></button>
+    <button onclick="pfpchange(6)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp6.png" alt="" width="50" height="50"></button>
+    <button onclick="pfpchange(7)"><img src="https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp7.png" alt="" width="50" height="50"></button>
+
+<br>
+    <br>
+    <br>
+  <h1 style="color:white;font-size:20px;">Custom profile picture</h1>
+    <br>
+    <h1 style="color:white;font-size:15px;">Enter the image url</h1>
+    <input type="text" id="custompfp" value="">
+
+<button onclick="pfpurl()">Change</button>
+
+<script src="login.js"> </script>
+
+</div>
+</body>
+</html>
