@@ -11,6 +11,7 @@ function register() {
   else {
   localStorage.setItem("username", x);
   localStorage.setItem("pfp", "https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp0.png");
+  document.getElementById("text").innerHTML = localStorage.getItem("username");
   localStorage.setItem("loggedin", "true");
     document.getElementById("message").innerHTML = "Your account has been created!";
     window.location.href = 'https://gamesupd.github.io/accounts/welcome';
@@ -80,6 +81,8 @@ var loggedin = localStorage.getItem("loggedin");
   if (loggedin.includes("true")) {
   document.getElementById("text").innerHTML = "Hello, " + localStorage.getItem("username");
   document.getElementById("pfp").src = localStorage.getItem("pfp");
+  if (loggedin.includes("true")) {document.getElementById("profile").href = "https://gamesupd.github.io/accounts/login.html"}
+  document.getElementById("profile").href = "https://gamesupd.github.io/accounts/profile.html?user=" + localStorage.getItem("username") + "&pfp=" + localStorage.getItem("pfp") + "&desc=" + localStorage.getItem("description");
 }
 }
 
@@ -135,13 +138,24 @@ var url = document.getElementById("custompfp").value;
 }
 
 function profile() {
-var loggedin = localStorage.getItem("loggedin");
-  if (loggedin.includes("true")) {
-  document.getElementById("text").innerHTML = localStorage.getItem("username");
-  document.getElementById("pfp").src = localStorage.getItem("pfp");
+let params = new URL(document.location).searchParams;
+  let user = params.get("user");
+  let pfp = params.get("pfp");
+  let desc = params.get("desc");
+  document.getElementById("pfp").src = pfp;
+  document.getElementById("text").innerHTML = user;
+  document.getElementById("description").value = desc;
+  document.getElementById("pagetitle").innerHTML = user + " on GameSup"
+  if (user == localStorage.getItem("username")) {
+  document.getElementById("description").removeAttribute("readonly");
   }
-  else {
-  window.location.href = 'https://gamesupd.github.io/accounts';
-  }
+}
 
+function updateDesc() {
+let params = new URL(document.location).searchParams;
+let user = params.get("user");
+ if (user == localStorage.getItem("username")) {
+let desc = document.getElementById("description").value;
+localStorage.setItem("description", desc);
+}
 }
