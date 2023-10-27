@@ -81,7 +81,8 @@ var loggedin = localStorage.getItem("loggedin");
   if (loggedin.includes("true")) {
   document.getElementById("text").innerHTML = "Hello, " + localStorage.getItem("username");
   document.getElementById("pfp").src = localStorage.getItem("pfp");
-  if (loggedin.includes("true")) {document.getElementById("profile").href = "https://gamesupd.github.io/accounts/login.html"}
+  if (loggedin.includes("true")) {document.getElementById("profile").href = "https://gamesupd.github.io/accounts/login.html"
+                                 }
   document.getElementById("profile").href = "https://gamesupd.github.io/accounts/profile.html?user=" + localStorage.getItem("username") + "&pfp=" + localStorage.getItem("pfp") + "&desc=" + localStorage.getItem("description");
 }
 }
