@@ -11,7 +11,6 @@ function register() {
   else {
   localStorage.setItem("username", x);
   localStorage.setItem("pfp", "https://raw.githubusercontent.com/SuperGames-D/GameSup/main/pfp/pfp0.png");
-  document.getElementById("text").innerHTML = localStorage.getItem("username");
   localStorage.setItem("loggedin", "true");
     document.getElementById("message").innerHTML = "Your account has been created!";
     window.location.href = 'https://gamesupd.github.io/accounts/welcome';
